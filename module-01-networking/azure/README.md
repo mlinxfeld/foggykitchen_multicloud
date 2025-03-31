@@ -1,5 +1,7 @@
 # FoggyKitchen Multicloud Course – Azure Edition - **Module 01: Networking**
 
+![](module-01-networking-azure.jpg)
+
 ## 🌐 Objective
 
 In this module, we will build the foundational networking layer in Microsoft Azure, equivalent to a standard OCI VCN setup. This includes:
@@ -8,7 +10,6 @@ In this module, we will build the foundational networking layer in Microsoft Azu
 - A Virtual Network (VNet)
 - Public and private subnets
 - A NAT Gateway for private egress
-- A Public IP for the NAT Gateway
 - A basic Network Security Group (NSG) with SSH access
 
 This is the first step in building a progressively layered multicloud landscape — starting from the network base in Azure. The same logical setup is mirrored in OCI in the corresponding `/oci/` directory.
