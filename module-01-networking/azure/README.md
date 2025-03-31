@@ -1,6 +1,6 @@
 # FoggyKitchen Multicloud Course – Azure Edition - **Module 01: Networking**
 
-![](module-01-networking-azure.jpg)
+<img src="module-01-networking-azure.jpg" width="400"/>
 
 ## 🌐 Objective
 
