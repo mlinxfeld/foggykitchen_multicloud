@@ -1,4 +1,4 @@
-# FoggyKitchen Multicloud Course– Azure Edition  
+# FoggyKitchen Multicloud Course – Azure Edition  
 
 **Module 01: Networking**
 
@@ -87,7 +87,7 @@ After completing this networking layer, you will be able to:
 This is an open learning project — contributions are welcome!  
 Submit a pull request or check out [FoggyKitchen.com](https://foggykitchen.com/) for more updates.
 
-## �� License
+## 🪪 License
 Copyright (c) 2025 [FoggyKitchen.com](https://foggykitchen.com/)
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.  
