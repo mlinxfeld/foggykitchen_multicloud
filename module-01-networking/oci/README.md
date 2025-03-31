@@ -12,6 +12,8 @@ In this module, we will build the foundational networking layer in Oracle Cloud 
 - Two route tables (public and private)
 - A basic Security List for SSH access
 
+![](module-01-networking-oci.jpg)
+
 This is the first step in building a progressively layered multicloud landscape — starting from the network base in OCI. The same logical setup will be mirrored in Azure in the corresponding `/azure/` directory.
 
 ---
