@@ -17,38 +17,13 @@ This setup mimics the classic bastion + private backend pattern and mirrors the 
 
 ---
 
-## 📦 Resources Created
-
-- 1x **Azure Resource Group**
-- 1x **Virtual Network (VNet)**
-- 1x **Public Subnet**
-- 1x **Private Subnet**
-- 1x **Network Security Group (NSG)**
-- 1x **Public IP for Bastion**
-- 1x **NAT Gateway for outbound connectivity**
-- 2x **Network Interfaces**
-- 2x **Linux Virtual Machines**
-- SSH key pair (generated via `tls_private_key`)
-
----
-
-## 🧠 Prerequisites
-
-- Azure Subscription  
-- Service Principal credentials with Contributor role  
-- Terraform or OpenTofu installed  
-
----
-
 ## 🔐 Authentication with Azure
 
-Make sure the following environment variables are set or define them in `terraform.tfvars`:
+Authentication is handled automatically by the Azure CLI or service principal, depending on your Terraform provider configuration.  
+Make sure you're authenticated by running:
 
-```hcl
-client_id       = "your-app-id"
-client_secret   = "your-client-secret"
-tenant_id       = "your-tenant-id"
-subscription_id = "your-subscription-id"
+```bash
+az login
 ```
 
 ---
