@@ -27,10 +27,10 @@ module-01-networking/
 ## 📸 Topology Diagrams
 
 ### Oracle Cloud Infrastructure (OCI)
-![OCI Diagram](oci/image.png)
+![OCI Diagram](oci/module-01-networking-oci.jpg)
 
 ### Microsoft Azure
-![Azure Diagram](azure/image.png)
+![Azure Diagram](azure/module-01-networking-azure.jpg)
 
 ---
 
