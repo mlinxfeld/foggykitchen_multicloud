@@ -2,7 +2,9 @@
 
 <img src="module-01-networking-azure.jpg" width="400"/>
 
-## 🌐 Objective
+---
+
+## ⚙️ Objective
 
 In this module, we will build the foundational networking layer in Microsoft Azure, equivalent to a standard OCI VCN setup. This includes:
 

@@ -2,7 +2,9 @@
 
 <img src="module-02-compute-oci.jpg" width="400"/>
 
-## 🖥️ Objective
+---
+
+## ⚙️ Objective
 
 In this module, we deploy two compute instances in Oracle Cloud Infrastructure (OCI) as a foundation for a secure and layered multicloud architecture:
 

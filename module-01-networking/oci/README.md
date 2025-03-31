@@ -2,7 +2,9 @@
 
 <img src="module-01-networking-oci.jpg" width="400"/>
 
-## 🌐 Objective
+---
+
+## ⚙️ Objective
 
 In this module, we will build the foundational networking layer in Oracle Cloud Infrastructure (OCI), equivalent to a standard VNet setup in Azure. This includes:
 
