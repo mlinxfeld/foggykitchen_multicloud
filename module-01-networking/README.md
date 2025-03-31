@@ -1,4 +1,4 @@
-# Module 01 - Networking Comparison: OCI vs Azure
+# FoggyKitchen Multicloud Course - **Module 01: Networking**
 
 This module presents a side-by-side comparison of basic network topologies deployed in **Oracle Cloud Infrastructure (OCI)** and **Microsoft Azure**, using **Terraform or OpenTofu** as Infrastructure-as-Code (IaC) tools.
 
