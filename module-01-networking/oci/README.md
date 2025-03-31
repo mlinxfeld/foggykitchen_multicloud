@@ -1,5 +1,7 @@
 # FoggyKitchen Multicloud Course – OCI Edition - **Module 01: Networking**
 
+![](module-01-networking-oci.jpg)
+
 ## 🌐 Objective
 
 In this module, we will build the foundational networking layer in Oracle Cloud Infrastructure (OCI), equivalent to a standard VNet setup in Azure. This includes:
@@ -11,8 +13,6 @@ In this module, we will build the foundational networking layer in Oracle Cloud 
 - A NAT Gateway for private egress
 - Two route tables (public and private)
 - A basic Security List for SSH access
-
-![](module-01-networking-oci.jpg)
 
 This is the first step in building a progressively layered multicloud landscape — starting from the network base in OCI. The same logical setup will be mirrored in Azure in the corresponding `/azure/` directory.
 
