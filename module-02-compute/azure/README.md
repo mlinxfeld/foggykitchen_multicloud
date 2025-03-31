@@ -82,7 +82,7 @@ tofu destroy
 ## 🔁 Related Modules
 
 - [module-01-networking/azure](../../module-01-networking/azure/) – foundational network
-- [module-02-compute/oci](../module-02-compute/oci/) – same scenario in Oracle Cloud Infrastructure
+- [module-02-compute/oci](../oci/) – same scenario in Oracle Cloud Infrastructure
 
 ---
 

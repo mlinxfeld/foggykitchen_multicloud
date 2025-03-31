@@ -120,6 +120,14 @@ After completing this compute module, you can:
 
 ---
 
+## 🔁 Related Modules
+
+- [module-01-networking/oci](../../module-01-networking/oci/) – foundational network
+- [module-02-compute/azure](../azure/) – same scenario in Microsoft Azure
+
+
+---
+
 ## 📣 Contributing
 
 This is an open learning project — contributions are welcome!  
