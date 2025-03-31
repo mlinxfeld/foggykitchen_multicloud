@@ -1,6 +1,4 @@
-# FoggyKitchen Multicloud Course – OCI Edition  
-
-**Module 01: Networking**
+# FoggyKitchen Multicloud Course – OCI Edition - **Module 01: Networking**
 
 ## 🌐 Objective
 
