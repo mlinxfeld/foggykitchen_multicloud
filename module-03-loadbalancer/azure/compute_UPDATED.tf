@@ -1,5 +1,6 @@
 resource "azurerm_linux_virtual_machine" "foggykitchen_bastion_vm" {
   name                = "foggykitchen_bastion_vm"
+  computer_name       = "fkbastionvm"
   location            = azurerm_resource_group.foggykitchen_rg.location
   resource_group_name = azurerm_resource_group.foggykitchen_rg.name
   size                = var.vm_size
@@ -27,13 +28,16 @@ resource "azurerm_linux_virtual_machine" "foggykitchen_bastion_vm" {
 }
 
 resource "azurerm_linux_virtual_machine" "foggykitchen_backend_vm" {
-  name                = "foggykitchen_backend_vm"
+  count = var.node_count
+
+  name                = "foggykitchen_backend_vm${count.index + 1}"
+  computer_name       = "fkbackendvm${count.index + 1}"
   location            = azurerm_resource_group.foggykitchen_rg.location
   resource_group_name = azurerm_resource_group.foggykitchen_rg.name
   size                = var.vm_size
   admin_username      = "azureuser"
   network_interface_ids = [
-    azurerm_network_interface.foggykitchen_backend_nic.id
+    azurerm_network_interface.foggykitchen_backend_nic[count.index].id
   ]
 
   admin_ssh_key {

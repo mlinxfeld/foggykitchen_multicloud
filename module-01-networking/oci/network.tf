@@ -50,6 +50,7 @@ resource "oci_core_subnet" "foggykitchen_public_sub" {
   route_table_id             = oci_core_route_table.foggykitchen_public_rt.id
   prohibit_public_ip_on_vnic = false
   dns_label                  = "pub"
+  security_list_ids          = [oci_core_security_list.foggykitchen_ssh_seclist.id]
 }
 
 resource "oci_core_subnet" "foggykitchen_private_sub" {

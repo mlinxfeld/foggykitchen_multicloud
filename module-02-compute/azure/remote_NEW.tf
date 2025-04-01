@@ -4,7 +4,7 @@ resource "null_resource" "provision_backend" {
   connection {
     type                = "ssh"
     user                = "azureuser"
-    host                = azurerm_public_ip.foggykitchen_bastion_public_ip.ip_address
+    host                = azurerm_network_interface.foggykitchen_backend_nic.private_ip_address
     private_key         = tls_private_key.public_private_key_pair.private_key_pem
     bastion_host        = azurerm_public_ip.foggykitchen_bastion_public_ip.ip_address
     bastion_user        = "azureuser"
