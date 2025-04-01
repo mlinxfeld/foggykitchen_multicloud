@@ -76,7 +76,7 @@ region             = "eu-frankfurt-1"
 
 ```bash
 git clone https://github.com/mlinxfeld/foggykitchen_multicloud.git
-cd foggykitchen_multicloud/module-02-compute/oci/
+cd foggykitchen_multicloud/module-03-loadbalancer/oci/
 ```
 
 2. Initialize the Terraform or OpenTofu project:
