@@ -1,7 +1,7 @@
 resource "null_resource" "provision_backend" {
   count = var.node_count
 
-  depends_on = [azurerm_linux_virtual_machine.foggykitchen_backend_vm]
+  depends_on = [azurerm_linux_virtual_machine.foggykitchen_backend_vm,azurerm_linux_virtual_machine.foggykitchen_bastion_vm]
 
   connection {
     type                = "ssh"

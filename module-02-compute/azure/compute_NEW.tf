@@ -1,5 +1,6 @@
 resource "azurerm_linux_virtual_machine" "foggykitchen_bastion_vm" {
   name                = "foggykitchen_bastion_vm"
+  computer_name       = "fkbastionvm"
   location            = azurerm_resource_group.foggykitchen_rg.location
   resource_group_name = azurerm_resource_group.foggykitchen_rg.name
   size                = var.vm_size
@@ -28,6 +29,7 @@ resource "azurerm_linux_virtual_machine" "foggykitchen_bastion_vm" {
 
 resource "azurerm_linux_virtual_machine" "foggykitchen_backend_vm" {
   name                = "foggykitchen_backend_vm"
+  computer_name       = "fkbackendvm"
   location            = azurerm_resource_group.foggykitchen_rg.location
   resource_group_name = azurerm_resource_group.foggykitchen_rg.name
   size                = var.vm_size
