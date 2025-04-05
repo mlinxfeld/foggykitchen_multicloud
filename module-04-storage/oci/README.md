@@ -93,7 +93,7 @@ terraform destroy
 
 - [module-01-networking/oci](../../module-01-networking/oci/) – foundational VCN with public and private subnets
 - [module-02-compute/oci](../../module-02-compute/oci/) – bastion host and backend VMs deployment
-- [module-03-loadbalancer/oci](../module-03-loadbalancer/oci/) – introduces public Load Balancer
+- [module-03-loadbalancer/oci](../../module-03-loadbalancer/oci/) – introduces public Load Balancer
 - [module-04-storage/azure](../module-04-storage/azure/) – same storage concept in Microsoft Azure (coming soon)
 
 ---
