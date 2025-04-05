@@ -59,7 +59,6 @@ Each module has its own `README.md` with instructions to deploy the setup using 
 
 - Basic familiarity with **Terraform or OpenTofu**
 - Access to both **OCI** and **Azure** (with required CLI tools installed)
-- Public/private SSH key pair
 - Terraform 1.6+ or OpenTofu 1.6+
 
 ---
