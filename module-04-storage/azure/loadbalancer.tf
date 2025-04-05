@@ -32,6 +32,9 @@ resource "azurerm_network_interface_backend_address_pool_association" "foggykitc
 }
 
 resource "azurerm_lb_probe" "http_health_probe" {
+  depends_on          = [
+    null_resource.foggykitchen_provision_backend
+  ]
   name                = "http-probe"
   loadbalancer_id     = azurerm_lb.foggykitchen_lb.id
   #protocol            = "Http"

@@ -3,7 +3,7 @@ resource "azurerm_managed_disk" "foggykitchen_backend_vm_data_disk" {
   name                 = "foggykitchen-backend-vm${count.index + 1}-data-disk"
   location             = azurerm_resource_group.foggykitchen_rg.location
   resource_group_name  = azurerm_resource_group.foggykitchen_rg.name
-  storage_account_type = var.disk_sku           # np. "Premium_LRS"
+  storage_account_type = var.disk_sku          
   create_option        = "Empty"
   disk_size_gb         = var.disk_size_gb
   zone                 = var.use_zones ? element(["1", "2", "3"], count.index % 3) : null

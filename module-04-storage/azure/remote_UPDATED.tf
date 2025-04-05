@@ -35,6 +35,9 @@ resource "null_resource" "foggykitchen_attach_and_mount_data_disk" {
 }
 
 resource "null_resource" "foggykitchen_mount_nfs_shared_storage" {
+  depends_on = [ 
+    azurerm_private_endpoint.foggykitchen_storage_pe 
+  ]
   count = var.node_count
 
   triggers = {
@@ -56,9 +59,9 @@ resource "null_resource" "foggykitchen_mount_nfs_shared_storage" {
       "echo '== Installing NFS utils and mounting share'",
       "sudo apt-get update -y",
       "sudo apt-get install -y nfs-common",
-      "sudo mkdir -p /sharedfs",
-      "echo '${azurerm_storage_account.foggykitchen_sa.primary_blob_host}:/sharedfs /sharedfs nfs defaults 0 0' | sudo tee -a /etc/fstab",
-      "sudo mount /sharedfs"
+      "sudo mkdir -p /mount/sharedfs",
+      "sudo /bin/su -c \"echo 'foggykitchenstorage.file.core.windows.net:/foggykitchenstorage/sharedfs /mount/sharedfs nfs vers=4,minorversion=1,_netdev,nofail,sec=sys 0 0' >> /etc/fstab\"",
+      "sudo mount /mount/sharedfs -v"
     ]
   }
 }
@@ -78,25 +81,27 @@ resource "null_resource" "foggykitchen_provision_backend" {
   }
 
   provisioner "remote-exec" {
-    inline = ["echo '== 1. Installing HTTPD package with dnf'",
-      "sudo -u root dnf -y -q install httpd",
+    inline = [
+      "echo '== 1. Installing Apache2 package with apt'",
+      "sudo apt-get update -qq",
+      "sudo apt-get install -y apache2",
 
-      "echo '== 2. Creating /sharedfs/index.html'",
-      "sudo -u root touch /sharedfs/index.html",
-      "sudo /bin/su -c \"echo 'Welcome to FoggyKitchen.com! These are both WEBSERVERS under LB umbrella with shared index.html ...' > /sharedfs/index.html\"",
+      "echo '== 2. Creating /mount/sharedfs/index.html'",
+      "echo 'Welcome to FoggyKitchen.com! These are both WEBSERVERS under LB umbrella with shared index.html ...' | sudo tee /mount/sharedfs/index.html",
 
-      "echo '== 3. Adding Alias and Directory sharedfs to /etc/httpd/conf/httpd.conf'",
-      "sudo /bin/su -c \"echo 'Alias /shared/ /sharedfs/' >> /etc/httpd/conf/httpd.conf\"",
-      "sudo /bin/su -c \"echo '<Directory /sharedfs>' >> /etc/httpd/conf/httpd.conf\"",
-      "sudo /bin/su -c \"echo 'AllowOverride All' >> /etc/httpd/conf/httpd.conf\"",
-      "sudo /bin/su -c \"echo 'Require all granted' >> /etc/httpd/conf/httpd.conf\"",
-      "sudo /bin/su -c \"echo '</Directory>' >> /etc/httpd/conf/httpd.conf\"",
+      "echo '== 3. Adding Alias to Apache config'",
+      "sudo bash -c 'echo \"Alias /shared/ /mount/sharedfs/\" > /etc/apache2/conf-available/sharedfs.conf'",
+      "sudo bash -c 'echo \"<Directory /mount/sharedfs>\" >> /etc/apache2/conf-available/sharedfs.conf'",
+      "sudo bash -c 'echo \"  AllowOverride All\" >> /etc/apache2/conf-available/sharedfs.conf'",
+      "sudo bash -c 'echo \"  Require all granted\" >> /etc/apache2/conf-available/sharedfs.conf'",
+      "sudo bash -c 'echo \"</Directory>\" >> /etc/apache2/conf-available/sharedfs.conf'",
 
-      "echo '== 4. Disabling SELinux'",
-      "sudo -u root setenforce 0",
+      "echo '== 4. Enabling sharedfs config and restarting Apache'",
+      "sudo a2enconf sharedfs",
+      "sudo systemctl restart apache2",
 
-      "echo '== 5. Disabling firewall and starting HTTPD service'",
-      "sudo -u root service firewalld stop",
-    "sudo -u root service httpd start"]
+      "echo '== 5. Ensuring Apache is enabled on boot'",
+      "sudo systemctl enable apache2"
+    ]
   }
 }

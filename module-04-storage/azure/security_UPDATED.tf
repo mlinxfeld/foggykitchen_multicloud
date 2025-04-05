@@ -106,3 +106,31 @@ resource "azurerm_network_security_rule" "foggykitchen_backend_nsg_rule_allow_ht
   resource_group_name         = azurerm_resource_group.foggykitchen_rg.name
   network_security_group_name = azurerm_network_security_group.foggykitchen_backend_nsg.name
 }
+
+resource "azurerm_network_security_rule" "foggykitchen_backend_nsg_rule_allow_nfs_inbound" {
+  name                        = "AllowNFSInbound"
+  priority                    = 1004
+  direction                   = "Inbound"
+  access                      = "Allow"
+  protocol                    = "Tcp"
+  source_port_range           = "*"
+  destination_port_range      = "2049"
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.foggykitchen_rg.name
+  network_security_group_name = azurerm_network_security_group.foggykitchen_backend_nsg.name
+}
+
+resource "azurerm_network_security_rule" "foggykitchen_backend_nsg_rule_allow_nfs_outbound" {
+  name                        = "AllowNFSOutbound"
+  priority                    = 1005
+  direction                   = "Outbound"
+  access                      = "Allow"
+  protocol                    = "Tcp"
+  source_port_range           = "*"
+  destination_port_range      = "2049"
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.foggykitchen_rg.name
+  network_security_group_name = azurerm_network_security_group.foggykitchen_backend_nsg.name
+}

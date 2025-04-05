@@ -42,3 +42,8 @@ variable "storage_quota_gb" {
   default     = 100
   description = "Quota for the Azure Files NFS share in GB"
 }
+
+variable "my_public_ip" {
+  description = "Your current public IP address for firewall exception"
+  type        = string
+}

@@ -17,6 +17,7 @@ resource "azurerm_subnet" "foggykitchen_private_subnet" {
   resource_group_name  = azurerm_resource_group.foggykitchen_rg.name
   virtual_network_name = azurerm_virtual_network.foggykitchen_vnet.name
   address_prefixes     = ["10.0.2.0/24"]
+  service_endpoints    = ["Microsoft.Storage"]
 }
 
 resource "azurerm_nat_gateway" "foggykitchen_nat_gw" {
