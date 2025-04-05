@@ -99,7 +99,7 @@ tofu destroy
 
 - [module-01-networking/azure](../../module-01-networking/azure/) – foundational virtual network with public and private subnets
 - [module-02-compute/azure](../../module-02-compute/azure/) – bastion host and backend VMs deployment
-- [module-03-loadbalancer/azure](../module-03-loadbalancer/azure/) – public Load Balancer directing traffic to backend VMs
+- [module-03-loadbalancer/azure](../../module-03-loadbalancer/azure/) – public Load Balancer directing traffic to backend VMs
 - [module-04-storage/oci](../oci/) – same storage scenario deployed in Oracle Cloud Infrastructure
 
 ---
