@@ -25,7 +25,7 @@ resource "azurerm_storage_account_network_rules" "foggykitchen_nfs_nsg" {
 
   default_action             = "Deny"
   virtual_network_subnet_ids = [ azurerm_subnet.foggykitchen_private_subnet.id ]
-  ip_rules                   = ["89.64.90.117"]
+  ip_rules                   = [var.my_public_ip]
 
   bypass = ["AzureServices"]
 }

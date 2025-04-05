@@ -25,3 +25,7 @@ output "ssh_public_key_openssh" {
 output "foggykitchen_loadbalancer_public_ip" {
   value = oci_load_balancer.foggykitchen_loadbalancer.ip_address_details[0].ip_address
 }
+
+output "foggykitchen_adbs_database_id" {
+  value = module.oci-foggykitchen-adb.adb_database.adb_database_id 
+}

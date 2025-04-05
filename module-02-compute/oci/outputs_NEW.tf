@@ -1,10 +1,10 @@
 
-output "bastion_vm_public_ip" {
+output "foggykitchen_bastion_vm_public_ip" {
   description = "The public IP address of the Bastion VM"
   value       = oci_core_instance.foggykitchen_bastion_vm.public_ip
 }
 
-output "backend_vm_private_ip" {
+output "foggykitchen_backend_vm_private_ip" {
   description = "The private IP address of the Backend VM"
   value       = oci_core_instance.foggykitchen_backend_vm.private_ip
 }
