@@ -46,7 +46,7 @@ resource "oci_core_subnet" "foggykitchen_public_sub" {
   cidr_block                 = "10.0.1.0/24"
   compartment_id             = oci_identity_compartment.foggykitchen_compartment.id
   vcn_id                     = oci_core_vcn.foggykitchen_vcn.id
-  display_name               = "foggykitchen_public_rt"
+  display_name               = "foggykitchen_public_sub"
   route_table_id             = oci_core_route_table.foggykitchen_public_rt.id
   prohibit_public_ip_on_vnic = false
   dns_label                  = "pub"
@@ -57,7 +57,7 @@ resource "oci_core_subnet" "foggykitchen_private_sub" {
   cidr_block                 = "10.0.2.0/24"
   compartment_id             = oci_identity_compartment.foggykitchen_compartment.id
   vcn_id                     = oci_core_vcn.foggykitchen_vcn.id
-  display_name               = "foggykitchen_PrivateSubnet"
+  display_name               = "foggykitchen_private_sub"
   route_table_id             = oci_core_route_table.foggykitchen_private_rt.id
   prohibit_public_ip_on_vnic = true
   dns_label                  = "priv"
