@@ -46,8 +46,6 @@ resource "azurerm_network_security_rule" "foggykitchen_frontend_nsg_rule_allow_i
   network_security_group_name = azurerm_network_security_group.foggykitchen_frontend_nsg.name
 }
 
-
-
 resource "azurerm_subnet_network_security_group_association" "public_nsg_assoc" {
   subnet_id                 = azurerm_subnet.foggykitchen_public_subnet.id
   network_security_group_id = azurerm_network_security_group.foggykitchen_frontend_nsg.id
