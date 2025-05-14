@@ -102,7 +102,7 @@ terraform destroy
 
 ## 🌐 Learn More
 
-Visit [FoggyKitchen.com](https://foggykitchen.com) for multicloud tutorials, diagrams, and videos.
+Visit [FoggyKitchen.com](https://foggykitchen.com/courses/new-multicloud-foundations-azure-oci-deployed-with-terraform-opentofu/) for multicloud tutorials, diagrams, and videos.
 
 ---
 

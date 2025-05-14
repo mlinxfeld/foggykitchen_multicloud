@@ -123,7 +123,7 @@ tofu destroy
 ## 📣 Contributing
 
 This project is part of a multicloud educational series. Contributions are welcome!  
-Visit [FoggyKitchen.com](https://foggykitchen.com/) to learn more or submit pull requests via GitHub.
+Visit [FoggyKitchen.com](https://foggykitchen.com/courses/new-multicloud-foundations-azure-oci-deployed-with-terraform-opentofu/) to learn more or submit pull requests via GitHub.
 
 ---
 

@@ -61,7 +61,7 @@ This hands-on module helps you:
 
 ## 🌐 Learn More
 
-Visit [FoggyKitchen.com](https://foggykitchen.com) for full courses, multicloud labs, and more training content.
+Visit [FoggyKitchen.com](https://foggykitchen.com/courses/new-multicloud-foundations-azure-oci-deployed-with-terraform-opentofu/) for full courses, multicloud labs, and more training content.
 
 ---
 

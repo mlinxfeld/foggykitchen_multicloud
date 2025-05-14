@@ -62,7 +62,7 @@ This module provides hands-on experience in:
 
 ## 🌐 Learn More
 
-Explore more multicloud learning paths and OCI/Azure content at [FoggyKitchen.com](https://foggykitchen.com)
+Explore more multicloud learning paths and OCI/Azure content at [FoggyKitchen.com](https://foggykitchen.com/courses/new-multicloud-foundations-azure-oci-deployed-with-terraform-opentofu/)
 
 ---
 

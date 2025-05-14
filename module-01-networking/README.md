@@ -54,6 +54,6 @@ This exercise demonstrates how to build equivalent infrastructure in two major c
 
 ## 🌐 Learn More
 
-Visit [FoggyKitchen.com](https://foggykitchen.com) for in-depth courses, real-world scenarios, and full training bundles.
+Visit [FoggyKitchen.com](https://foggykitchen.com/courses/new-multicloud-foundations-azure-oci-deployed-with-terraform-opentofu/) for in-depth courses, real-world scenarios, and full training bundles.
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.

@@ -131,7 +131,7 @@ After completing this compute module, you can:
 ## 📣 Contributing
 
 This is an open learning project — contributions are welcome!  
-Submit a pull request or check out [FoggyKitchen.com](https://foggykitchen.com/) for more updates.
+Submit a pull request or check out [FoggyKitchen.com](https://foggykitchen.com/courses/new-multicloud-foundations-azure-oci-deployed-with-terraform-opentofu/) for more updates.
 
 ## 🪪 License
 Copyright (c) 2025 [FoggyKitchen.com](https://foggykitchen.com/)
