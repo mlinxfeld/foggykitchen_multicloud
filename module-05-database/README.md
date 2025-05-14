@@ -4,7 +4,7 @@ This module demonstrates how to deploy **database services** in both **Oracle Cl
 
 It builds upon previous modules and introduces:
 
-- A **managed PostgreSQL-compatible database** (Autonomous Database in OCI, Flexible Server in Azure)
+- Autonomous Database Serverless (ADB-S) in OCI and PostgreSQL Flexible Server in Azure
 - Deployment inside a **dedicated subnet**, isolated from general compute resources
 - Secure **private access** from backend VMs in the private subnet
 - Use of **bastion host** for provisioning and connectivity testing
