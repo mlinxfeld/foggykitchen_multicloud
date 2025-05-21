@@ -12,21 +12,24 @@ You will build hands-on projects and gain real-world experience designing founda
 - ✅ How to write **modular Terraform code** that works across clouds
 - ✅ How to deploy **resilient backend applications** with persistent block and shared file storage
 - ✅ How to work with **databases in the cloud** using native services (PostgreSQL, Autonomous DB)
+- ✅ How to implement **VNet/VCN peering** (local and cross-region)
 - ✅ How to think **multicloud**, not just multi-provider
 
 ---
 
 ## 🧱 Course Structure
 
-The course consists of **5 hands-on modules**, each implemented in **Azure and OCI**.
+The course consists of **7 hands-on modules**, each implemented in **Azure and OCI**.
 
-| Module | Description                                      |
-|--------|--------------------------------------------------|
-| [01 - Networking](module-01-networking/)      | Foundational VCN/VNet setup with public/private subnets |
-| [02 - Compute](module-02-compute/)           | Bastion host + backend VMs in private subnets            |
-| [03 - Load Balancer](module-03-loadbalancer/) | Public Load Balancer setup and testing                   |
-| [04 - Storage](module-04-storage/)           | Block storage & shared NFS across backend VMs           |
-| [05 - Database](module-05-database/)         | PostgreSQL (Azure) and Autonomous DB (OCI) integration   |
+| Module | Description                                          |
+|--------|------------------------------------------------------|
+| [01 - Networking](module-01-networking/)         | Foundational VCN/VNet setup with public/private subnets |
+| [02 - Compute](module-02-compute/)              | Bastion host + backend VMs in private subnets           |
+| [03 - Load Balancer](module-03-loadbalancer/)   | Public Load Balancer setup and testing                  |
+| [04 - Storage](module-04-storage/)              | Block storage & shared NFS across backend VMs           |
+| [05 - Database](module-05-database/)            | PostgreSQL (Azure) and Autonomous DB (OCI) integration  |
+| [06 - Local Peering](module-06-local-peering/)  | VCN/VNet peering in the same region                     |
+| [07 - Cross-Region Peering](module-07-cross-region-peering/) | Multiregion DRG/VNet peering & secure DB access        |
 
 ---
 
@@ -99,4 +102,3 @@ terraform destroy
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.  
 See [LICENSE](./LICENSE) for details.
-
