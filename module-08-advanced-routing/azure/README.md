@@ -1,6 +1,6 @@
 # FoggyKitchen Multicloud Course – Azure Edition – **Module 08: Advanced VNet Peering (Mesh Topology)**
 
-<img src="module-08-hub-and-spoke-azure.jpg" width="600"/>
+<img src="module-08-advanced-routing-azure.jpg" width="600"/>
 
 ---
 
