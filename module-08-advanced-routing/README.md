@@ -50,11 +50,10 @@ terraform apply
 ---
 
 ## 🧠 Learning Goals
-
-- Build **hub-and-spoke** architectures in OCI with **DRG + LPG + RPC**
-- Understand **mesh-like architectures** in Azure without DRG
-- Enable VMs in one region to access private databases or storage in another
-- Apply best practices for **DNS zone linking**, **NAT gateways**, and **security groups**
+- Implement **transitive routing** and **hub-and-spoke** patterns in **OCI** using **DRG**, **LPG**, and **RPC**
+- Understand **mesh-style peering topologies** in **Azure** using **Global VNet Peering**
+- Enable secure, private access to **databases and backend services** across regions and networks
+- Apply best practices for **DNS zone linking**, **NAT Gateways**, and **network security groups**
 
 ---
 
