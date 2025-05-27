@@ -19,7 +19,7 @@ You will build hands-on projects and gain real-world experience designing founda
 
 ## 🧱 Course Structure
 
-The course consists of **7 hands-on modules**, each implemented in **Azure and OCI**.
+The course consists of **8 hands-on modules**, each implemented in **Azure and OCI**.
 
 | Module | Description                                          |
 |--------|------------------------------------------------------|
@@ -30,6 +30,7 @@ The course consists of **7 hands-on modules**, each implemented in **Azure and O
 | [05 - Database](module-05-database/)            | PostgreSQL (Azure) and Autonomous DB (OCI) integration  |
 | [06 - Local Peering](module-06-local-peering/)  | VCN/VNet peering in the same region                     |
 | [07 - Cross-Region Peering](module-07-cross-region-peering/) | Multiregion DRG/VNet peering & secure DB access        |
+| [08 - Advanced Routing](module-08-advanced-routing/) | Multicloud mesh-style and transitive routing across VCNs/VNets and regions        |
 
 ---
 
