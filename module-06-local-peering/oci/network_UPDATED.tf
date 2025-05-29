@@ -133,6 +133,12 @@ resource "oci_core_local_peering_gateway" "foggykitchen_lpg1" {
   peer_id        = oci_core_local_peering_gateway.foggykitchen_lpg2.id
 }
 
+resource "oci_core_local_peering_gateway" "foggykitchen_lpg2" {
+  compartment_id = oci_identity_compartment.foggykitchen_compartment.id
+  vcn_id         = oci_core_vcn.foggykitchen_vcn2.id
+  display_name   = "foggykitchen_lpg2"
+}
+
 resource "oci_core_route_table" "foggykitchen_private_rt1" {
   compartment_id = oci_identity_compartment.foggykitchen_compartment.id
   vcn_id         = oci_core_vcn.foggykitchen_vcn1.id
@@ -155,12 +161,6 @@ resource "oci_core_route_table" "foggykitchen_private_rt1" {
     destination_type  = "CIDR_BLOCK"
     network_entity_id = oci_core_local_peering_gateway.foggykitchen_lpg1.id
   }
-}
-
-resource "oci_core_local_peering_gateway" "foggykitchen_lpg2" {
-  compartment_id = oci_identity_compartment.foggykitchen_compartment.id
-  vcn_id         = oci_core_vcn.foggykitchen_vcn2.id
-  display_name   = "foggykitchen_lpg2"
 }
 
 resource "oci_core_route_table" "foggykitchen_private_rt2" {
