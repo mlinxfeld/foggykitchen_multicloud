@@ -156,6 +156,7 @@ resource "oci_core_route_table" "foggykitchen_private_rt1" {
     network_entity_id = oci_core_service_gateway.foggykitchen_sgw1.id
   }
 
+   # VCN1 -> LPG1 -> VCN2
   route_rules {
     destination       = "192.168.0.0/16"
     destination_type  = "CIDR_BLOCK"
@@ -180,6 +181,7 @@ resource "oci_core_route_table" "foggykitchen_private_rt2" {
     network_entity_id = oci_core_service_gateway.foggykitchen_sgw2.id
   }
 
+  # VCN2 -> LPG2 -> VCN1
   route_rules {
     destination       = "10.0.0.0/16"
     destination_type  = "CIDR_BLOCK"
